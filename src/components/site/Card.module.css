@@ -1,0 +1,18 @@
+.card {
+  background: var(--color-canvas-elevated);
+  border: 1px solid var(--color-hairline);
+  color: var(--color-ink);
+}
+
+.feature {
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.pricing {
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}

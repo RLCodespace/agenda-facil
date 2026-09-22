@@ -1,0 +1,17 @@
+.mesh {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(var(--color-hairline) 1px, transparent 1px);
+  background-size: var(--space-lg) var(--space-lg);
+  mask-image: radial-gradient(
+    ellipse 70% 60% at 30% 20%,
+    black 0%,
+    transparent 75%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 70% 60% at 30% 20%,
+    black 0%,
+    transparent 75%
+  );
+}

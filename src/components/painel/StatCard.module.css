@@ -1,0 +1,26 @@
+.card {
+  background: var(--color-canvas-elevated);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+}
+
+.label {
+  font-size: var(--text-body-sm-size);
+  color: var(--color-mute);
+}
+
+.value {
+  font-size: var(--text-heading-lg-size);
+  font-weight: var(--text-heading-lg-weight);
+  line-height: var(--text-heading-lg-line);
+  color: var(--color-ink);
+}
+
+.hint {
+  font-size: var(--text-body-sm-size);
+  color: var(--color-faint);
+}

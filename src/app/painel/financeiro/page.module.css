@@ -1,0 +1,28 @@
+.notice {
+  font-size: var(--text-body-sm-size);
+  line-height: var(--text-body-sm-line);
+  color: var(--color-mute);
+  max-width: 60ch;
+  margin-bottom: var(--space-xl);
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.subtitle {
+  font-size: var(--text-heading-md-size);
+  font-weight: var(--text-heading-md-weight);
+  line-height: var(--text-heading-md-line);
+  color: var(--color-ink);
+  margin-bottom: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .statGrid {
+    grid-template-columns: 1fr;
+  }
+}
