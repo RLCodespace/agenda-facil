@@ -1,0 +1,11 @@
+.header {
+  margin-bottom: var(--space-xl);
+}
+
+.title {
+  font-size: var(--text-heading-lg-size);
+  font-weight: var(--text-heading-lg-weight);
+  line-height: var(--text-heading-lg-line);
+  letter-spacing: var(--text-heading-lg-tracking);
+  color: var(--color-ink);
+}
