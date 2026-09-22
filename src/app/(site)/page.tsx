@@ -1,44 +1,45 @@
 import { Button } from "@/components/site/Button";
 import { Card } from "@/components/site/Card";
+import { HeroConversation } from "@/components/site/HeroConversation";
 import { HeroGradient } from "@/components/site/HeroGradient";
 import { SectionEyebrow } from "@/components/site/SectionEyebrow";
 import styles from "./page.module.css";
 
 const FEATURES = [
   {
-    title: "Agendamento pelo WhatsApp",
+    title: "Atendimento automatico e inteligente",
     description:
-      "Seu cliente marca, remarca ou cancela direto na conversa, sem baixar app nenhum.",
+      "Um assistente de I.A conversa, agenda, remarca e cancela sozinho — sem voce precisar responder mensagem.",
   },
   {
-    title: "Horarios sempre atualizados",
+    title: "Agenda sempre organizada",
     description:
-      "O sistema mostra so os horarios livres da sua agenda, evitando choque de reservas.",
+      "So aparecem os horarios realmente livres, sem choque de reservas nem confusao.",
   },
   {
-    title: "Atendimento com I.A",
+    title: "Disponivel a qualquer hora",
     description:
-      "Um assistente responde duvidas comuns e conduz o agendamento sozinho, 24/7.",
+      "Seu negocio atende e agenda clientes 24 horas por dia, mesmo fora do expediente.",
   },
   {
-    title: "Self-hosted, sob seu controle",
+    title: "Voce no controle do seu dinheiro",
     description:
-      "Roda na sua propria infraestrutura. O pagamento das reservas continua direto com voce.",
+      "O pagamento da reserva e combinado direto com o cliente — nada passa pela nossa mao.",
   },
 ];
 
 const STEPS = [
   {
-    title: "Conecte seu WhatsApp",
-    description: "Ligamos o numero do seu negocio via WAHA, sem trocar de numero.",
+    title: "Cadastre seu negocio",
+    description: "Configure servicos, horarios e equipe em poucos minutos.",
   },
   {
-    title: "Configure sua agenda",
-    description: "Defina servicos, duracao e horarios de funcionamento.",
+    title: "Ative o atendimento automatico",
+    description: "A I.A passa a responder e agendar seus clientes por voce.",
   },
   {
-    title: "Deixe a I.A atender",
-    description: "Clientes agendam, cancelam e tiram duvidas sozinhos, a qualquer hora.",
+    title: "Acompanhe pelo painel",
+    description: "Veja agendamentos, clientes e financeiro tudo num so lugar.",
   },
 ];
 
@@ -47,20 +48,23 @@ export default function Home() {
     <main className={styles.main}>
       <section className={styles.hero}>
         <HeroGradient />
-        <SectionEyebrow>Atendimento automatizado</SectionEyebrow>
-        <h1 className={styles.heroTitle}>
-          Agendamento com I.A direto no WhatsApp do seu negocio
-        </h1>
-        <p className={styles.heroSubtitle}>
-          Barbearias, saloes e pequenos negocios ganham um assistente que marca,
-          remarca e cancela horarios sozinho — sem intermediar seu dinheiro.
-        </p>
-        <div className={styles.heroCtas}>
-          <Button href="/contato">Comecar agora</Button>
-          <Button href="/precos" variant="secondary">
-            Ver precos
-          </Button>
+        <div className={styles.heroText}>
+          <SectionEyebrow>Atendimento automatizado</SectionEyebrow>
+          <h1 className={styles.heroTitle}>
+            Atendimento automatizado com I.A pro seu negocio
+          </h1>
+          <p className={styles.heroSubtitle}>
+            Barbearias, saloes e pequenos negocios ganham um assistente que atende,
+            agenda, remarca e cancela sozinho — voce so cuida do que importa.
+          </p>
+          <div className={styles.heroCtas}>
+            <Button href="/contato">Comecar agora</Button>
+            <Button href="/precos" variant="secondary">
+              Ver precos
+            </Button>
+          </div>
         </div>
+        <HeroConversation />
       </section>
 
       <section className={styles.section}>

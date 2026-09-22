@@ -37,9 +37,8 @@ export function Footer() {
         </div>
       </div>
       <p className={styles.legal}>
-        agenda-facil e self-hosted. O pagamento das reservas e feito
-        diretamente com o dono do negocio — nao intermediamos nem
-        armazenamos valores.
+        O pagamento das reservas e feito diretamente com o dono do
+        negocio — nao intermediamos nem armazenamos valores.
       </p>
     </footer>
   );

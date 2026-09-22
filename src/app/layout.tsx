@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "agenda-facil — atendimento com I.A pro seu negocio",
   description:
-    "Agendamento automatico via WhatsApp para pequenos negocios: horarios disponiveis, cancelamento e atendimento com I.A. Self-hosted, sem gestao de pagamento.",
+    "Atendimento automatizado com I.A pra pequenos negocios: agenda organizada, horarios disponiveis e cancelamento sozinho, a qualquer hora.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

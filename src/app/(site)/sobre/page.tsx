@@ -12,18 +12,17 @@ export default function Sobre() {
         <p>
           O agenda-facil nasceu pra resolver um problema comum de barbearias,
           saloes e prestadores de servico pequenos: perder tempo (e clientes)
-          organizando agenda por mensagem de WhatsApp.
+          organizando a agenda manualmente.
         </p>
         <p>
           Nosso assistente de I.A conversa com o cliente final, mostra os
-          horarios disponiveis, confirma ou cancela o agendamento — tudo
-          dentro do WhatsApp que o negocio ja usa.
+          horarios disponiveis e confirma ou cancela o agendamento sozinho,
+          a qualquer hora do dia.
         </p>
         <p>
-          O sistema e self-hosted: roda na infraestrutura do proprio negocio
-          ou numa instancia dedicada. Nao processamos nem guardamos dinheiro
-          de reserva — o pagamento continua sendo combinado direto entre o
-          cliente e o dono do negocio.
+          Nao processamos nem guardamos dinheiro de reserva — o pagamento
+          continua sendo combinado direto entre o cliente e o dono do
+          negocio.
         </p>
       </div>
     </main>
