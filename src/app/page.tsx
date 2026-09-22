@@ -1,69 +1,101 @@
-import Image from "next/image";
+import { Button } from "@/components/site/Button";
+import { Card } from "@/components/site/Card";
+import { HeroGradient } from "@/components/site/HeroGradient";
+import { SectionEyebrow } from "@/components/site/SectionEyebrow";
 import styles from "./page.module.css";
+
+const FEATURES = [
+  {
+    title: "Agendamento pelo WhatsApp",
+    description:
+      "Seu cliente marca, remarca ou cancela direto na conversa, sem baixar app nenhum.",
+  },
+  {
+    title: "Horarios sempre atualizados",
+    description:
+      "O sistema mostra so os horarios livres da sua agenda, evitando choque de reservas.",
+  },
+  {
+    title: "Atendimento com I.A",
+    description:
+      "Um assistente responde duvidas comuns e conduz o agendamento sozinho, 24/7.",
+  },
+  {
+    title: "Self-hosted, sob seu controle",
+    description:
+      "Roda na sua propria infraestrutura. O pagamento das reservas continua direto com voce.",
+  },
+];
+
+const STEPS = [
+  {
+    title: "Conecte seu WhatsApp",
+    description: "Ligamos o numero do seu negocio via WAHA, sem trocar de numero.",
+  },
+  {
+    title: "Configure sua agenda",
+    description: "Defina servicos, duracao e horarios de funcionamento.",
+  },
+  {
+    title: "Deixe a I.A atender",
+    description: "Clientes agendam, cancelam e tiram duvidas sozinhos, a qualquer hora.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className={styles.main}>
+      <section className={styles.hero}>
+        <HeroGradient />
+        <SectionEyebrow>Atendimento automatizado</SectionEyebrow>
+        <h1 className={styles.heroTitle}>
+          Agendamento com I.A direto no WhatsApp do seu negocio
+        </h1>
+        <p className={styles.heroSubtitle}>
+          Barbearias, saloes e pequenos negocios ganham um assistente que marca,
+          remarca e cancela horarios sozinho — sem intermediar seu dinheiro.
+        </p>
+        <div className={styles.heroCtas}>
+          <Button href="/contato">Comecar agora</Button>
+          <Button href="/precos" variant="secondary">
+            Ver precos
+          </Button>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className={styles.section}>
+        <SectionEyebrow>O que voce ganha</SectionEyebrow>
+        <h2 className={styles.sectionTitle}>Feito pra quem cuida do negocio sozinho</h2>
+        <div className={styles.featureGrid}>
+          {FEATURES.map((feature) => (
+            <Card key={feature.title} variant="feature">
+              <h3 className={styles.cardTitle}>{feature.title}</h3>
+              <p className={styles.cardBody}>{feature.description}</p>
+            </Card>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className={styles.section}>
+        <SectionEyebrow>Como funciona</SectionEyebrow>
+        <h2 className={styles.sectionTitle}>Tres passos pra sair do papel</h2>
+        <div className={styles.steps}>
+          {STEPS.map((step, index) => (
+            <div key={step.title} className={styles.step}>
+              <span className={styles.stepNumber}>{index + 1}</span>
+              <div>
+                <h3 className={styles.cardTitle}>{step.title}</h3>
+                <p className={styles.cardBody}>{step.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.ctaBand}>
+        <h2 className={styles.sectionTitle}>Pronto pra automatizar seus agendamentos?</h2>
+        <Button href="/contato">Falar com a gente</Button>
+      </section>
+    </main>
   );
 }

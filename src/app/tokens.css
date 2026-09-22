@@ -1,0 +1,124 @@
+:root {
+  /* Color */
+  --color-ink: #171717;
+  --color-on-primary: #ffffff;
+  --color-canvas: #fafafa;
+  --color-canvas-elevated: #ffffff;
+  --color-hairline: #ebebeb;
+  --color-hairline-soft: #f2f2f2;
+  --color-body: #4d4d4d;
+  --color-mute: #8f8f8f;
+  --color-faint: #a1a1a1;
+
+  --color-link: #0070f3;
+  --color-link-deep: #0761d1;
+  --color-link-soft: #d3e5ff;
+
+  --color-violet: #7928ca;
+  --color-cyan: #50e3c2;
+  --color-pink: #ff0080;
+  --color-magenta: #eb367f;
+
+  --color-error: #ee0000;
+  --color-error-deep: #c50000;
+  --color-warning: #f5a623;
+
+  --gradient-develop-start: #007cf0;
+  --gradient-develop-end: #00dfd8;
+  --gradient-preview-start: #7928ca;
+  --gradient-preview-end: #ff0080;
+  --gradient-ship-start: #ff4d4d;
+  --gradient-ship-end: #f9cb28;
+
+  /* Spacing */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 40px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --space-section: 128px;
+
+  /* Radius */
+  --radius-none: 0px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill-category: 64px;
+  --radius-pill: 100px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  --font-mono: var(--font-geist-mono), "JetBrains Mono", monospace;
+
+  --text-display-xl-size: 48px;
+  --text-display-xl-weight: 600;
+  --text-display-xl-line: 48px;
+  --text-display-xl-tracking: -2.4px;
+
+  --text-heading-lg-size: 32px;
+  --text-heading-lg-weight: 600;
+  --text-heading-lg-line: 40px;
+  --text-heading-lg-tracking: -1.28px;
+
+  --text-heading-md-size: 20px;
+  --text-heading-md-weight: 600;
+  --text-heading-md-line: 28px;
+  --text-heading-md-tracking: -0.4px;
+
+  --text-label-sm-size: 14px;
+  --text-label-sm-weight: 500;
+  --text-label-sm-line: 20px;
+  --text-label-sm-tracking: -0.28px;
+
+  --text-mono-eyebrow-size: 12px;
+  --text-mono-eyebrow-weight: 500;
+  --text-mono-eyebrow-line: 16px;
+
+  --text-body-lg-size: 16px;
+  --text-body-lg-weight: 400;
+  --text-body-lg-line: 24px;
+
+  --text-body-md-size: 14px;
+  --text-body-md-weight: 400;
+  --text-body-md-line: 20px;
+
+  --text-body-sm-size: 12px;
+  --text-body-sm-weight: 400;
+  --text-body-sm-line: 16px;
+
+  --text-button-lg-size: 16px;
+  --text-button-lg-weight: 500;
+  --text-button-lg-line: 20px;
+
+  --text-button-md-size: 14px;
+  --text-button-md-weight: 500;
+  --text-button-md-line: 20px;
+
+  /* Elevation */
+  --shadow-whisper: 0px 1px 1px rgba(0, 0, 0, 0.04);
+  --shadow-floating: 0px 2px 2px rgba(0, 0, 0, 0.04),
+    0px 8px 16px -4px rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-ink: #ededed;
+    --color-on-primary: #0a0a0a;
+    --color-canvas: #0a0a0a;
+    --color-canvas-elevated: #141414;
+    --color-hairline: #262626;
+    --color-hairline-soft: #1a1a1a;
+    --color-body: #b3b3b3;
+    --color-mute: #7a7a7a;
+    --color-faint: #5c5c5c;
+
+    --color-link: #3291ff;
+    --color-link-deep: #0070f3;
+    --color-link-soft: #0d2847;
+  }
+}

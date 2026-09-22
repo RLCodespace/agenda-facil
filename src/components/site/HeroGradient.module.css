@@ -1,0 +1,31 @@
+.mesh {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.35;
+  filter: blur(60px);
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      var(--color-cyan) 0%,
+      transparent 45%
+    ),
+    radial-gradient(circle at 50% 10%, var(--color-link) 0%, transparent 45%),
+    radial-gradient(
+      circle at 80% 30%,
+      var(--color-violet) 0%,
+      transparent 45%
+    ),
+    radial-gradient(circle at 65% 60%, var(--color-magenta) 0%, transparent 45%),
+    radial-gradient(
+      circle at 20% 70%,
+      var(--gradient-ship-end) 0%,
+      transparent 45%
+    );
+}
+
+@media (prefers-color-scheme: dark) {
+  .mesh {
+    opacity: 0.25;
+  }
+}
