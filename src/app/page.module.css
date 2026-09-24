@@ -7,14 +7,19 @@
   position: relative;
   overflow: hidden;
   isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100svh - var(--header-height));
 }
 
 .heroInner {
   position: relative;
   z-index: 1;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--space-section) var(--space-lg);
+  padding: var(--space-3xl) var(--space-lg);
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;

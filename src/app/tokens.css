@@ -38,6 +38,9 @@
   --space-4xl: 96px;
   --space-section: 128px;
 
+  /* Layout */
+  --header-height: 64px;
+
   /* Radius */
   --radius-none: 0px;
   --radius-sm: 6px;
