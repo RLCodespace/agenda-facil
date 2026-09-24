@@ -19,6 +19,11 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  pointer-events: none;
+
+  a {
+    pointer-events: auto;
+  }
 }
 
 * {
@@ -36,6 +41,38 @@ h1,
 h2,
 h3 {
   color: var(--color-ink);
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #1a0f08;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+html {
+  scrollbar-color: var(--color-hairline) var(--color-canvas);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+  }
 }
 
 code,

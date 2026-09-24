@@ -1,23 +1,22 @@
 import { Button } from "@/components/site/Button";
 import { Card } from "@/components/site/Card";
-import { SectionEyebrow } from "@/components/site/SectionEyebrow";
 import styles from "./page.module.css";
 
 const PLANS = [
   {
     name: "Essencial",
-    description: "Pra quem esta comecando a automatizar o agendamento.",
-    detail: "Ate 1 numero de WhatsApp e 1 agenda.",
+    description: "Para quem está começando a automatizar o agendamento.",
+    detail: "Até 1 número de WhatsApp e 1 agenda.",
   },
   {
-    name: "Negocio",
-    description: "Pra times com mais de um profissional atendendo.",
-    detail: "Multiplas agendas e horarios por profissional.",
+    name: "Negócio",
+    description: "Para equipes com mais de um profissional em atendimento.",
+    detail: "Múltiplas agendas e horários por profissional.",
   },
   {
     name: "Sob medida",
-    description: "Volume alto ou integracao especifica com seu negocio.",
-    detail: "Fale com a gente pra desenhar o plano certo.",
+    description: "Alto volume de atendimentos ou integração específica com o seu negócio.",
+    detail: "Fale conosco para desenharmos o plano ideal.",
   },
 ];
 
@@ -25,11 +24,10 @@ export default function Precos() {
   return (
     <main className={styles.main}>
       <section className={styles.header}>
-        <SectionEyebrow>Precos</SectionEyebrow>
-        <h1 className={styles.title}>Planos em definicao</h1>
+        <h1 className={styles.title}>Planos em definição</h1>
         <p className={styles.subtitle}>
-          Estamos fechando os valores finais. Fale com a gente pra saber a
-          faixa de preco e reservar prioridade no lancamento.
+          Estamos definindo os valores finais. Fale conosco para conhecer a
+          faixa de preço e reservar prioridade no lançamento.
         </p>
       </section>
 

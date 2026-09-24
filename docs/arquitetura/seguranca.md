@@ -52,5 +52,4 @@ a confirmar/ajustar antes de qualquer implementacao.
 ## Status
 
 Proposta inicial, ainda nao implementada — nenhum codigo de auth,
-schema ou middleware existe no repo ainda. Ver
-[`checkpoint.md`](./checkpoint.md) pra ordem sugerida de implementacao.
+schema ou middleware existe no repo ainda.

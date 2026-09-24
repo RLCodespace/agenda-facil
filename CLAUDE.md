@@ -9,3 +9,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+# Regras do projeto
+
+- Landing page fica em `src/app/page.tsx` (root do app), sem pasta dedicada tipo `(site)`.
+- Evitar roteamento: tudo na landing page quando possivel; criar rota so se necessario.
+- Sem arquivo de checkpoint: documentar alteracoes nos PRs e commits.

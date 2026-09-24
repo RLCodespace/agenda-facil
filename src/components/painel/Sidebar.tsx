@@ -22,7 +22,7 @@ export function Sidebar({ open, onNavigate }: SidebarProps) {
   return (
     <aside className={`${styles.sidebar} ${open ? styles.open : ""}`}>
       <Link href="/" className={styles.wordmark}>
-        agenda-facil
+        agenda-fácil
       </Link>
       <nav className={styles.nav}>
         {NAV_LINKS.map((link) => {

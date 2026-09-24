@@ -6,8 +6,8 @@ import { Button } from "./Button";
 import styles from "./Header.module.css";
 
 const NAV_LINKS = [
-  { href: "/", label: "Inicio" },
-  { href: "/precos", label: "Precos" },
+  { href: "/", label: "Início" },
+  { href: "/precos", label: "Preços" },
   { href: "/sobre", label: "Sobre" },
   { href: "/contato", label: "Contato" },
 ];
@@ -19,7 +19,7 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles.row}>
         <Link href="/" className={styles.wordmark} onClick={() => setOpen(false)}>
-          agenda-facil
+          agenda<span className={styles.dot}>·</span>fácil
         </Link>
         <nav className={styles.nav}>
           {NAV_LINKS.map((link) => (
@@ -30,7 +30,7 @@ export function Header() {
         </nav>
         <div className={styles.desktopCta}>
           <Button href="/contato" variant="sm">
-            Falar com a gente
+            Fale conosco
           </Button>
         </div>
         <button
@@ -56,7 +56,7 @@ export function Header() {
             </Link>
           ))}
           <Button href="/contato" variant="sm">
-            Falar com a gente
+            Fale conosco
           </Button>
         </nav>
       )}
