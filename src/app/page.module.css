@@ -111,8 +111,8 @@
   min-height: 320px;
   padding: var(--space-2xl);
   border-radius: var(--radius-lg);
-  background: var(--color-primary);
-  color: var(--color-on-primary);
+  background: var(--color-slab);
+  color: var(--color-on-slab);
 }
 
 .leadCard::before {
@@ -191,8 +191,8 @@
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background: var(--color-primary);
-  color: var(--color-on-primary);
+  background: var(--color-slab);
+  color: var(--color-on-slab);
 }
 
 .ctaBand::before,
