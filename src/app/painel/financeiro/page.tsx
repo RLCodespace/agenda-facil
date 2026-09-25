@@ -17,7 +17,7 @@ const RESUMO_SERVICOS: ResumoServico[] = [
 ];
 
 const COLUMNS: DataTableColumn<ResumoServico>[] = [
-  { key: "servico", label: "Servico" },
+  { key: "servico", label: "Serviço" },
   { key: "atendimentos", label: "Atendimentos" },
   { key: "receita", label: "Receita" },
 ];
@@ -33,9 +33,9 @@ export default function Financeiro() {
       </p>
 
       <div className={styles.statGrid}>
-        <StatCard label="Receita do mes" value="R$ 2.910,00" />
-        <StatCard label="Atendimentos no mes" value="89" />
-        <StatCard label="Ticket medio" value="R$ 32,70" />
+        <StatCard label="Receita do mês" value="R$ 2.910,00" />
+        <StatCard label="Atendimentos no mês" value="89" />
+        <StatCard label="Ticket médio" value="R$ 32,70" />
       </div>
 
       <h2 className={styles.subtitle}>Resumo por servico</h2>

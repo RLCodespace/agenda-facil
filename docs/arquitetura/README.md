@@ -23,5 +23,3 @@ por conta do proprio dono do negocio.
 - [`testes.md`](./testes.md) — estrategia de teste (enfase em
   End-to-End, por causa do risco de prejuizo real em erro de
   agendamento).
-- [`checkpoint.md`](./checkpoint.md) — retrato do que ja foi feito, o
-  que esta em aberto, e os proximos passos sugeridos.

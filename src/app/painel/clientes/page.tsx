@@ -10,7 +10,7 @@ interface Cliente {
 }
 
 const CLIENTES: Cliente[] = [
-  { id: 1, nome: "Joao Pedro", telefone: "(11) 90000-0001", ultimoAgendamento: "21/09/2026", totalVisitas: 14 },
+  { id: 1, nome: "João Pedro", telefone: "(11) 90000-0001", ultimoAgendamento: "21/09/2026", totalVisitas: 14 },
   { id: 2, nome: "Marcos Lima", telefone: "(11) 90000-0002", ultimoAgendamento: "21/09/2026", totalVisitas: 6 },
   { id: 3, nome: "Rafael Souza", telefone: "(11) 90000-0003", ultimoAgendamento: "22/09/2026", totalVisitas: 2 },
   { id: 4, nome: "Bruno Alves", telefone: "(11) 90000-0004", ultimoAgendamento: "22/09/2026", totalVisitas: 9 },
@@ -19,7 +19,7 @@ const CLIENTES: Cliente[] = [
 const COLUMNS: DataTableColumn<Cliente>[] = [
   { key: "nome", label: "Nome" },
   { key: "telefone", label: "Telefone" },
-  { key: "ultimoAgendamento", label: "Ultimo agendamento" },
+  { key: "ultimoAgendamento", label: "Último agendamento" },
   { key: "totalVisitas", label: "Total de visitas" },
 ];
 

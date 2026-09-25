@@ -12,15 +12,15 @@ interface ProximoAgendamento {
 }
 
 const PROXIMOS_AGENDAMENTOS: ProximoAgendamento[] = [
-  { id: 1, cliente: "Joao Pedro", servico: "Corte + Barba", horario: "Hoje, 14:00", status: "Confirmado" },
+  { id: 1, cliente: "João Pedro", servico: "Corte + Barba", horario: "Hoje, 14:00", status: "Confirmado" },
   { id: 2, cliente: "Marcos Lima", servico: "Corte", horario: "Hoje, 15:30", status: "Confirmado" },
-  { id: 3, cliente: "Rafael Souza", servico: "Barba", horario: "Amanha, 09:00", status: "Aguardando" },
+  { id: 3, cliente: "Rafael Souza", servico: "Barba", horario: "Amanhã, 09:00", status: "Aguardando" },
 ];
 
 const COLUMNS: DataTableColumn<ProximoAgendamento>[] = [
   { key: "cliente", label: "Cliente" },
-  { key: "servico", label: "Servico" },
-  { key: "horario", label: "Horario" },
+  { key: "servico", label: "Serviço" },
+  { key: "horario", label: "Horário" },
   { key: "status", label: "Status" },
 ];
 
@@ -30,9 +30,9 @@ export default function PainelDashboard() {
       <PageHeader eyebrow="Painel" title="Dashboard" />
 
       <div className={styles.statGrid}>
-        <StatCard label="Agendamentos hoje" value="6" hint="2 aguardando confirmacao" />
-        <StatCard label="Proximo horario livre" value="16:00" />
-        <StatCard label="Clientes novos no mes" value="12" />
+        <StatCard label="Agendamentos hoje" value="6" hint="2 aguardando confirmação" />
+        <StatCard label="Próximo horário livre" value="16:00" />
+        <StatCard label="Clientes novos no mês" value="12" />
       </div>
 
       <h2 className={styles.subtitle}>Proximos agendamentos</h2>

@@ -5,8 +5,8 @@ const COLUMNS = [
   {
     title: "Produto",
     links: [
-      { href: "/", label: "Inicio" },
-      { href: "/precos", label: "Precos" },
+      { href: "/", label: "Início" },
+      { href: "/precos", label: "Preços" },
     ],
   },
   {
@@ -22,7 +22,9 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
-        <span className={styles.wordmark}>agenda-facil</span>
+        <span className={styles.wordmark}>
+          agenda<span className={styles.dot}>·</span>fácil
+        </span>
         <div className={styles.columns}>
           {COLUMNS.map((column) => (
             <div key={column.title} className={styles.column}>
@@ -37,8 +39,8 @@ export function Footer() {
         </div>
       </div>
       <p className={styles.legal}>
-        O pagamento das reservas e feito diretamente com o dono do
-        negocio — nao intermediamos nem armazenamos valores.
+        O pagamento das reservas é feito diretamente com o proprietário do
+        negócio — não intermediamos nem armazenamos valores.
       </p>
     </footer>
   );

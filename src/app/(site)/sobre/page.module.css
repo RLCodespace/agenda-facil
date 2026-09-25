@@ -8,10 +8,11 @@
 }
 
 .title {
-  font-size: var(--text-heading-lg-size);
-  font-weight: var(--text-heading-lg-weight);
-  line-height: var(--text-heading-lg-line);
-  letter-spacing: var(--text-heading-lg-tracking);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: -0.02em;
   color: var(--color-ink);
   max-width: 24ch;
 }

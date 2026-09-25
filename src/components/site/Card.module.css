@@ -2,6 +2,16 @@
   background: var(--color-canvas-elevated);
   border: 1px solid var(--color-hairline);
   color: var(--color-ink);
+  transition:
+    transform 0.3s var(--ease-out),
+    box-shadow 0.3s var(--ease-out),
+    border-color 0.3s var(--ease-out);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lift);
 }
 
 .feature {
