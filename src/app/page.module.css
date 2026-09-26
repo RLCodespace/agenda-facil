@@ -290,3 +290,35 @@
     padding: var(--space-xl);
   }
 }
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 760px;
+}
+
+.faqItem {
+  border: 1px solid var(--color-hairline, var(--color-canvas-sunken));
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  background: var(--color-canvas);
+  transition: border-color 0.3s var(--ease-out);
+}
+
+.faqItem:hover,
+.faqItem[open] {
+  border-color: var(--color-accent);
+}
+
+.faqQuestion {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.faqAnswer {
+  margin-top: var(--space-sm);
+  line-height: var(--text-body-md-line);
+  color: var(--color-body);
+}

@@ -125,22 +125,53 @@
 }
 
 .dots {
-  position: absolute;
-  inset: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  opacity: 0;
-  transition: opacity 0.2s var(--ease-out);
+  height: 1.5em;
+}
+
+/* Digitando: bolha compacta, sem reservar espaço do texto final. */
+.isTyping {
+  width: fit-content;
+  padding: var(--space-sm) var(--space-md);
 }
 
 .isTyping .text {
-  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  white-space: nowrap;
 }
 
 .isTyping .dots {
-  opacity: 1;
+  display: flex;
+}
+
+/* Cada mensagem ocupa sempre a altura final; o fantasma define o tamanho do espaço. */
+.slot {
+  display: grid;
+}
+
+.slot > .bubble {
+  grid-area: 1 / 1;
+}
+
+.slot > .ia {
+  justify-self: start;
+}
+
+.slot > .cliente {
+  justify-self: end;
+}
+
+.slot > .ghost {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.isTyping {
+  align-self: start;
 }
 
 .dots i {

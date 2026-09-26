@@ -43,6 +43,16 @@
   border: 1px solid transparent;
   border-radius: var(--radius-full);
   padding: var(--space-xxs) var(--space-sm);
+  animation: badgePulse 2s ease-out infinite;
+}
+
+@keyframes badgePulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-primary) 60%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 8px transparent;
+  }
 }
 
 .planName {

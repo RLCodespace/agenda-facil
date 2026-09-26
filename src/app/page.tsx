@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Button } from "@/components/site/Button";
@@ -5,7 +6,51 @@ import { Card } from "@/components/site/Card";
 import { HeroConversation } from "@/components/site/HeroConversation";
 import { HeroGradient } from "@/components/site/HeroGradient";
 import { Reveal } from "@/components/site/Reveal";
+import { JsonLd } from "@/components/site/JsonLd";
+import { absoluteUrl, CONTACT_EMAIL, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Agendamento pelo WhatsApp com I.A. para barbearias e salões | agenda·fácil",
+  },
+  description:
+    "Assistente de I.A. que agenda, remarca e cancela pelo WhatsApp 24h. Menos faltas, agenda organizada e mais tempo para o seu negócio.",
+  alternates: { canonical: absoluteUrl("/") },
+};
+
+const FAQ = [
+  {
+    question: "O que é um assistente de I.A. para agendamentos no WhatsApp?",
+    answer:
+      "É um atendente virtual que conversa com o seu cliente, mostra os horários livres e agenda, remarca ou cancela sem que você precise responder a cada mensagem.",
+  },
+  {
+    question: "Como funciona o agendamento automático?",
+    answer:
+      "O cliente escolhe o serviço, o dia e o horário na conversa. O assistente oferece apenas horários realmente livres e confirma a reserva na hora.",
+  },
+  {
+    question: "O assistente atende fora do horário de expediente?",
+    answer:
+      "Sim. O atendimento funciona 24 horas por dia, inclusive à noite, aos fins de semana e feriados.",
+  },
+  {
+    question: "Serve para barbearia, salão de beleza e outros serviços?",
+    answer:
+      "Sim. Foi pensado para barbearias, salões e pequenos prestadores de serviço que trabalham com hora marcada.",
+  },
+  {
+    question: "O agenda-fácil recebe o pagamento das reservas?",
+    answer:
+      "Não. O pagamento é combinado diretamente entre o cliente e o dono do negócio; nenhum valor passa pelo agenda-fácil.",
+  },
+  {
+    question: "Quanto custa?",
+    answer:
+      "Os planos ainda estão sendo definidos. Fale conosco para conhecer a faixa de preço e reservar prioridade no lançamento.",
+  },
+];
 
 const LEAD_FEATURE = {
   title: "Atendimento automático e inteligente",
@@ -50,6 +95,45 @@ const STEPS = [
 export default function Home() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": `${SITE_URL}/#organization`,
+              name: SITE_NAME,
+              url: absoluteUrl("/"),
+              email: CONTACT_EMAIL,
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${SITE_URL}/#website`,
+              url: absoluteUrl("/"),
+              name: SITE_NAME,
+              inLanguage: "pt-BR",
+              publisher: { "@id": `${SITE_URL}/#organization` },
+            },
+            {
+              "@type": "SoftwareApplication",
+              name: SITE_NAME,
+              applicationCategory: "BusinessApplication",
+              operatingSystem: "Web",
+              description: SITE_DESCRIPTION,
+              url: absoluteUrl("/"),
+              inLanguage: "pt-BR",
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: FAQ.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: { "@type": "Answer", text: item.answer },
+              })),
+            },
+          ],
+        }}
+      />
       <Header />
       <main className={styles.main}>
         <section className={styles.hero}>
@@ -120,6 +204,20 @@ export default function Home() {
                 </li>
               ))}
             </ol>
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <Reveal>
+            <h2 className={styles.sectionTitle}>Perguntas frequentes</h2>
+          </Reveal>
+          <div className={styles.faq}>
+            {FAQ.map((item) => (
+              <details key={item.question} className={styles.faqItem}>
+                <summary className={styles.faqQuestion}>{item.question}</summary>
+                <p className={styles.faqAnswer}>{item.answer}</p>
+              </details>
+            ))}
           </div>
         </section>
 

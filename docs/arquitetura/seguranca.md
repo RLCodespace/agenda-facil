@@ -49,6 +49,56 @@ a confirmar/ajustar antes de qualquer implementacao.
   nunca de um campo enviado pelo client (evita um negocio manipular
   request e enxergar/alterar dado de outro).
 
+## Prompt injection e I.A
+
+Meta: nivel de rigor de big tech. Nao existe prompt que bloqueie
+injection de forma confiavel, entao o desenho **limita o estrago** quando
+ela funciona:
+
+- **Autorizacao fora do modelo**: a I.A so chama tools. `tenant_id` e o
+  numero do cliente final vem da sessao/mapeamento confiavel, nunca do
+  texto da mensagem. Mesmo enganada, ela so alcanca os dados daquele
+  cliente.
+- **Tools minimas e tipadas**: poucas funcoes (ex: listar meus
+  agendamentos, ver horarios, agendar, remarcar, cancelar), com schema
+  estrito e validacao no servidor (horario existe, servico pertence ao
+  tenant). Sem SQL livre.
+- **Sem segredos no prompt** e sem dado de outros clientes no contexto:
+  tudo que entra no contexto pode vazar.
+- **Acao destrutiva pede confirmacao**, executada por codigo
+  deterministico.
+- Conteudo do usuario tratado como dado, nao instrucao.
+- **Validacao da saida** antes de enviar (sem link estranho, sem dado de
+  terceiros, sem vazar o prompt).
+- Limite de tool calls por turno e log de auditoria de cada chamada.
+- Suite de ataques de injection rodando em CI (red team continuo).
+
+## Fraude, abuso e engenharia reversa
+
+- Cota de tokens por tenant e limites por numero no gateway de I.A (ver
+  [`decisoes-nuvem-ia.md`](./decisoes-nuvem-ia.md)). A chave da I.A e os
+  prompts ficam so no servidor.
+- Superficie de API: IDs nao previsiveis, sem enumeracao, sem endpoints
+  esquecidos, sem segredo no bundle do front.
+- Agendamento falso: limites por numero, lembretes com confirmacao e
+  liberacao automatica do horario.
+- Conta do dono: MFA, protecao contra brute force e takeover.
+- Infra: segredos fora do repo, backups criptografados, logs sem dado
+  pessoal.
+
+## Pesquisa e revisao por agent especializado
+
+Decisao do usuario: a fase de seguranca deve ser feita por agent
+especializado, com pesquisa na internet sobre vazamentos, fraude e
+engenharia reversa, antes de qualquer deploy. A seguranca precisa ser
+"muito forte".
+
+## Riscos do WAHA
+
+WAHA nao e oficial: risco de banimento do numero e sessao sequestravel
+no nosso servidor. Mitigacoes em
+[`decisoes-nuvem-ia.md`](./decisoes-nuvem-ia.md).
+
 ## Status
 
 Proposta inicial, ainda nao implementada — nenhum codigo de auth,

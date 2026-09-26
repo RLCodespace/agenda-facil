@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/site";
 import { Button } from "@/components/site/Button";
 import { Card } from "@/components/site/Card";
 import styles from "./page.module.css";
@@ -19,6 +21,13 @@ const PLANS = [
     detail: "Fale conosco para desenharmos o plano ideal.",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Preços e planos do assistente de I.A. para agendamentos",
+  description:
+    "Planos do agenda-fácil para barbearias, salões e pequenos negócios. Fale conosco e reserve prioridade no lançamento.",
+  alternates: { canonical: absoluteUrl("/precos") },
+};
 
 export default function Precos() {
   return (

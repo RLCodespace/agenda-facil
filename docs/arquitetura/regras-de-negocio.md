@@ -13,6 +13,14 @@ querer configurar essas regras de um jeito diferente.
   servico (ex: "corte = 30min" pra todo mundo). A duracao pode variar
   por profissional ou por agendamento especifico.
 
+- **Lembretes 48h, 24h e 2h antes**, com resposta "confirmo". Sem
+  confirmacao ate o prazo limite, o horario e liberado. Agendamento com
+  menos de 48h de antecedencia pula os lembretes que ja passaram.
+- **Limite de agendamentos ativos por numero** e limite de antecedencia,
+  ambos configuraveis por negocio (padrao proposto: 2 ativos).
+- Detalhes e pontos ainda abertos (prazo exato de liberacao, padrao pra
+  cliente novo) em [`decisoes-nuvem-ia.md`](./decisoes-nuvem-ia.md).
+
 ## Em aberto (a definir com o usuario)
 
 Cada topico abaixo foi levantado e explicitamente adiado pra uma sessao

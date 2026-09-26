@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/site";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "Sobre o agenda-fácil: I.A. de agendamento para pequenos negócios",
+  description:
+    "Conheça o agenda-fácil, assistente de I.A. que agenda, remarca e cancela horários pelo WhatsApp para barbearias, salões e prestadores de serviço.",
+  alternates: { canonical: absoluteUrl("/sobre") },
+};
 
 export default function Sobre() {
   return (

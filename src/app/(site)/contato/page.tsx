@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/site";
 import { Button } from "@/components/site/Button";
 import { Card } from "@/components/site/Card";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "Fale conosco",
+  description:
+    "Entre em contato com o agenda-fácil pelo WhatsApp ou e-mail e conheça o assistente de I.A. de agendamentos para o seu negócio.",
+  alternates: { canonical: absoluteUrl("/contato") },
+};
 
 export default function Contato() {
   return (

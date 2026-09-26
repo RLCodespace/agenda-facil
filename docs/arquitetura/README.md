@@ -7,7 +7,9 @@ projeto.
 ## O produto
 
 Sistema de agendamento com atendimento via I.A pra pequenos negocios
-(barbearia, salao, etc), self-hosted, integrado ao WhatsApp via WAHA.
+(barbearia, salao, etc), **hospedado na nuvem da equipe** (nao e
+self-hosted), integrado ao WhatsApp via WAHA. O cliente final fala com a
+I.A somente por WhatsApp.
 Fluxo central: agendamento, horarios disponiveis, cancelamento. O
 agenda-facil **nao processa nem gerencia pagamento** — isso fica sempre
 por conta do proprio dono do negocio.
@@ -20,6 +22,9 @@ por conta do proprio dono do negocio.
   explicitamente.
 - [`seguranca.md`](./seguranca.md) — recomendacoes de seguranca
   (LGPD, autenticacao do painel, integracao WAHA, multi-tenant).
+- [`decisoes-nuvem-ia.md`](./decisoes-nuvem-ia.md) — decisoes de
+  hospedagem, gateway de I.A com cota por plano, anti-abuso, lembretes
+  e no-show, WAHA e seus riscos. Inclui os pontos em aberto.
 - [`testes.md`](./testes.md) — estrategia de teste (enfase em
   End-to-End, por causa do risco de prejuizo real em erro de
   agendamento).

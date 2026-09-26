@@ -81,20 +81,30 @@ export function HeroConversation() {
           {MESSAGES.map((message, index) => {
             const phase = phases[index];
             return (
-              <div
-                key={index}
-                className={`${styles.bubble} ${
-                  message.from === "ia" ? styles.ia : styles.cliente
-                } ${phase !== "hidden" ? styles.in : ""} ${
-                  phase === "typing" ? styles.isTyping : ""
-                }`}
-              >
-                <span className={styles.text}>{message.text}</span>
-                <span className={styles.dots}>
-                  <i />
-                  <i />
-                  <i />
-                </span>
+              <div key={index} className={styles.slot}>
+                {/* Fantasma invisível: reserva a altura final da bolha para o card não mudar de tamanho. */}
+                <div
+                  className={`${styles.bubble} ${styles.ghost} ${
+                    message.from === "ia" ? styles.ia : styles.cliente
+                  }`}
+                  aria-hidden="true"
+                >
+                  <span className={styles.text}>{message.text}</span>
+                </div>
+                <div
+                  className={`${styles.bubble} ${
+                    message.from === "ia" ? styles.ia : styles.cliente
+                  } ${phase !== "hidden" ? styles.in : ""} ${
+                    phase === "typing" ? styles.isTyping : ""
+                  }`}
+                >
+                  <span className={styles.text}>{message.text}</span>
+                  <span className={styles.dots}>
+                    <i />
+                    <i />
+                    <i />
+                  </span>
+                </div>
               </div>
             );
           })}
